@@ -33,7 +33,6 @@ export function renderSpaceItems(spaceItem) {
     button.textContent = 'Add To Cart';
     li.append(button);
 
-
     return li;
 }
 
