@@ -13,39 +13,56 @@ body {
 }
 
 .item-box {
-  border: solid #333 2px;
-  height: 460px;
+  height: 455px;
   width: 200px;
   margin-top: 10px;
   margin-left: 30px;
-  padding: 5px;
-  background-image: url("../assets/space-bg.png");
+  padding: 10px;
+  /* background-image: url("../assets/space-bg.png");
   background-repeat: no-repeat;
   background-position: right;
-  background-size: cover;
+  background-size: cover; */
+}
+
+.space-list-products {
   display: flex;
+  flex-wrap: wrap;
+}
+
+ul {
+  /* display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly; */
 }
 
 a {
   text-decoration: none;
+  margin-bottom: 25px;
+  background: url("../assets/stars.jpg") center/cover;
+  color: whitesmoke;
 }
 
 p {
   text-align: center;
+  margin: 5px;
 }
 
 img {
-  height: 100px;
+  height: 200px;
   width: 100px;
   width: 100%;
 }
-
-.item-name {
+.stars {
+  height: 200px;
+}
+.item-name,
+.store-name {
   font-family: "Anton", sans-serif;
   font-weight: bold;
   text-align: center;
   margin-bottom: 5px;
+  margin-top: 25px;
 }
 
 .btn {
@@ -67,78 +84,4 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-/* main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: calc(var(--footer-height));
-} */
-
-/* section {
-  background-color: var(--color5);
-  width: 1000px;
-  max-width: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: var(--gutter);
-  padding-bottom: var(--gutter);
-  margin-top: var(--gutter);
-  margin-bottom: var(--gutter);
-  border: solid 2px var(--color1);
-} */
-
-header {
-  display: flex;
-  justify-content: flex-end;
-  background-color: var(--color3);
-  height: var(--header-height);
-  box-shadow: var(--shadow);
-}
-
-footer {
-  display: flex;
-  justify-content: flex-end;
-  background-color: var(--color3);
-  box-shadow: var(--shadow);
-}
-
-h2 {
-  font-size: 1.8rem;
-  font-weight: bold;
-}
-
-.gutter-right {
-  margin-right: 20px;
-}
-
-.main-logo {
-  animation: pulse 5s infinite ease-in-out;
-}
-
-header img {
-  height: var(--header-height);
-}
-
-content {
-  width: 80%;
-}
-
-p {
-  margin: var(--gutter);
-}
-
-footer {
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  height: var(--footer-height);
-  display: flex;
-  justify-content: flex-end;
-  background-color: var(--color3);
-  box-shadow: var(--shadow);
 }
