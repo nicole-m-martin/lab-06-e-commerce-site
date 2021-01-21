@@ -14,9 +14,19 @@ table {
 h2 {
   text-align: center;
   font-family: "Anton", sans-serif;
-  font-size: 25px;
+  font-size: 50px;
 }
 
+li {
+  background-color: #caf0f8;
+  border: solid #333 1px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.item-name {
+  color: #333;
+}
 .homepage-box {
   margin-top: 55px;
   display: flex;
@@ -26,15 +36,11 @@ h2 {
 }
 
 .item-box {
-  height: 455px;
+  height: 475px;
   width: 200px;
   margin-top: 10px;
   margin-left: 30px;
-  padding: 10px;
-  /* background-image: url("../assets/space-bg.png");
-  background-repeat: no-repeat;
-  background-position: right;
-  background-size: cover; */
+  padding: 5px;
 }
 
 .products-link {
@@ -89,14 +95,15 @@ img {
   color: #ffffff;
   border: none;
   font-size: 16px;
-  padding: 10px 20px;
+  padding: 5px 10px;
   border-radius: 5px;
   cursor: pointer;
   width: 100%;
+  margin-bottom: 5px;
 }
 
 .btn-2 {
-  background: #4c6ca0;
+  background: #333;
   color: #ffffff;
   border: none;
   font-size: 16px;
