@@ -17,6 +17,14 @@ h2 {
   font-size: 25px;
 }
 
+.homepage-box {
+  margin-top: 55px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .item-box {
   height: 455px;
   width: 200px;
