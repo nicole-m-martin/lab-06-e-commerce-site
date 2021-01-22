@@ -1,3 +1,4 @@
+
 export function findById(id, array) {
     for (let item of array) {
         if (item.id === id) {
@@ -6,9 +7,10 @@ export function findById(id, array) {
     }
 }
 
-export function getSpaceItemTotal(cartItem, spaceItems) {
 
-    return cartItem.quantity * spaceItems.price;
+export function getSpaceItemTotal(quantity, price) {
+    const itemTotal = quantity * price;
+    return itemTotal;
 }
 
 
@@ -16,9 +18,9 @@ export function getSpaceItemTotal(cartItem, spaceItems) {
 export function calOrderTotal(cart, spaceItems) {
 
     let total = 0;
-    for (let item of cart){
-        const spaceItem = findById(item.id, spaceItems);
-        const totalForOneItem = getSpaceItemTotal(item, spaceItem);
+    for (let item of cart) {
+        const spaceItem = findById(Number(item.id), spaceItems);
+        const totalForOneItem = getSpaceItemTotal(item.quantity, spaceItem.price);
 
         total = total + totalForOneItem;      
     }

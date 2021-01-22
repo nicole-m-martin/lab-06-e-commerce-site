@@ -28,5 +28,4 @@ tRow.append(tData2);
 tRow.append(tTotal);
 
 table.append(tRow);
-console.log('hello');
 

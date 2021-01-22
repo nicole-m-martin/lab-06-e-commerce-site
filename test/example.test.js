@@ -2,11 +2,13 @@
 import { renderLineItems } from '../cart/renderLineItems.js';
 import { findById, getSpaceItemTotal, calOrderTotal } from '../cart/cartUtils.js';
 import { renderSpaceItems } from '../products/renderSpaceItems.js';
+// import { spaceItems } from '../products/data.js';
 
 
 
 const test = QUnit.test;
 
+// listItem Test
 test('should take in a space item and return an li', (expect) => {
     const billy = {
         id: 1,
@@ -34,6 +36,7 @@ test('should take in a space item and return an li', (expect) => {
     expect.equal(actual.outerHTML, expected);
 });
 
+// findById Test
 test('findById should take in a 3 and the space items array and return a Grey Astroid', (expect) => {
     const spaceItems = [
         {
@@ -109,6 +112,7 @@ test('findById should take in a 3 and the space items array and return a Grey As
     expect.deepEqual(actual, expected);
 });
 
+// Render Function Test
 test('should take in a space item and return an <tr>', (expect) => {
     const billy = {
         id: 1,
@@ -137,38 +141,56 @@ test('should take in a space item and return an <tr>', (expect) => {
     expect.equal(actual.outerHTML, expected);
 });
 
+// calItemTotal Test
 test('getSpaceItemTotal should take in quantity and price of item and return the total', (expect) => {
-    
-    //Arrange
-    // Set up your arguments and expectations
-    const price = 45;
-    const quantity = 5;
-    const expected = 225;       
-    
-    //Act 
-    // Call the function you're testing and set the result to a const
-    const actual = getSpaceItemTotal(quantity, price);
+    const expected = 15;
 
-    //Expect       
-    // Make assertions about what is expected versus the actual result
+    const actual = getSpaceItemTotal(5, 3);
+
     expect.equal(actual, expected);
+    
 });
 
+// calcOrderTotal Test
+test('calcOrderTotal takes in the cart items and returns the total of the cart', (expect) => {
+    const cart = [
+        {
+            id: 1,
+            quantity: 5
+        },
+        {
+            id: 3,
+            quantity: 4
+        },
 
-test('CalcOrderTotal takes in the cart items and returns the total of the cart', (expect) => {
-    const cartItem = {
+
+    ];
+
+    const items = [{
         id: 1,
-        quantity: 5,
-           
-    };
+        name: 'Billy',
+        image: 'alien.png',
+        description: 'A nice, fun, alien friend to guide you in your space adventures.',
+        category: 'Alien',
+        price: '45.00'
+    },
+    {
+        id: 3,
+        name: 'Grey Astroid',
+        image: 'astroid.png',
+        description: 'A large astroid to keep a piece of space with you always',
+        category: 'space rock',
+        price: '85.00'
+    },
+    ];
 
     //Arrange
     // Set up your arguments and expectations
-    const expected = ``;         
+    const expected = 565;         
     
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = calOrderTotal(cartItem);
+    const actual = calOrderTotal(cart, items);
 
     //Expect       
     // Make assertions about what is expected versus the actual result
