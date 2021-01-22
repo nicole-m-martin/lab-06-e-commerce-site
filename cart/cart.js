@@ -37,8 +37,12 @@ table.append(tRow);
 const button = document.querySelector('button');
 
 button.addEventListener('click', () => {
-    alert(JSON.stringify(cart, true, 2));
+    // alert customer of purchase
+    alert('Rad Stuff Is On The Way!!!');
     clearCart();
+    // after purchase go back to homepage
+    location.reload();
+    location.href = '../index.html';
 
 });
 

@@ -30,19 +30,15 @@ export function renderSpaceItems(spaceItem) {
     pPrice.textContent = `$${spaceItem.price}`;
     li.append(pPrice);
 
-    // const button = document.createElement('button');
-    // button.classList.add('btn');
-    // button.textContent = 'Add To Cart';
-    // li.append(button);
 
 // Add to cart event listener
     const addToCartBtn = document.createElement('button');
-    addToCartBtn.classList.add('add-button');
+    addToCartBtn.classList.add('btn');
     addToCartBtn.addEventListener('click', () => {
         addToCart(spaceItem.id);
     });
 
-    addToCartBtn.textContent = 'Want! Get in my cart!';
+    addToCartBtn.textContent = 'Add To Cart';
     li.append(addToCartBtn);
 
     return li;
