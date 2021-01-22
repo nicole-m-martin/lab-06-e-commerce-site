@@ -1,28 +1,29 @@
-import { spaceItems } from '../products/data.js';
-import { findById } from '../utils.js';
-// import { getSpaceItemTotal } from '../utils';
+import { getSpaceItemTotal } from '../cart/cartUtils.js';
 
-export function renderLineItems(cartItem) {
-    const spaceItem = findById(cartItem.id, spaceItems);
+
+export function renderLineItems(cartItem, spaceItems) {
+    const tr = document.createElement('tr');
+    
+
     const quantity = cartItem.quantity;
     
+    const nameTd = document.createElement('td');
+    nameTd.textContent = spaceItems.name;
     
-    const tr = document.createElement('tr');
-
-    const productTd = document.createElement('td');
-    productTd.textContent = spaceItem.name;
-    tr.append(productTd);
     
     const quantityTd = document.createElement('td');
     quantityTd.textContent = quantity;
-    tr.append(quantityTd);
-
+    
     const priceTd = document.createElement('td');
-    priceTd.textContent = `$${quantity * spaceItem.price}`;
+    priceTd.textContent = `$${getSpaceItemTotal(cartItem, spaceItems)}`;
+    
+    tr.append(nameTd);
+    tr.append(quantityTd);
     tr.append(priceTd);
     
     return tr;
 }
+
 
 
 
