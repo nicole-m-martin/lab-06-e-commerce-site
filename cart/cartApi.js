@@ -9,7 +9,7 @@ const defaultEmptyCart = [];
 
 // make getCart function
 export function getCart() {
-    const stringCart = localStorage.getSpaceItem(CART);
+    const stringCart = localStorage.getItem(CART);
 
     // if there is a cart in local storage, parse it in JSON 
     if (stringCart) {
@@ -20,7 +20,7 @@ export function getCart() {
         const stringDefaultCart = JSON.stringify(defaultEmptyCart);
       
         // put stringy empty cart in local storage
-        localStorage.setSpaceItem(CART, stringDefaultCart);
+        localStorage.setItem(CART, stringDefaultCart);
         // 
         return defaultEmptyCart;
     }
@@ -62,4 +62,4 @@ export function addToCart(id) {
              
 }
 // reload the page
-location.reload();
+// location.reload();

@@ -1,7 +1,10 @@
 import { findById, calOrderTotal } from './cartUtils.js';
-import { cart } from '../cart/cartData.js';
+// import { cart } from '../cart/cartData.js';
 import { spaceItems } from '../products/data.js';
 import { renderLineItems } from '../cart/renderLineItems.js';
+import { getCart, clearCart } from '../cart/cartApi.js';
+
+const cart = getCart();
 
 
 const table = document.querySelector('table');
@@ -28,4 +31,16 @@ tRow.append(tData2);
 tRow.append(tTotal);
 
 table.append(tRow);
+
+
+// add event listener button
+const button = document.querySelector('button');
+
+button.addEventListener('click', () => {
+    alert(JSON.stringify(cart, true, 2));
+    clearCart();
+
+});
+
+
 

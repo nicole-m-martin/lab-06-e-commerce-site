@@ -1,4 +1,6 @@
-// This is where the export function renderSpaceItems will go
+// import addCartFunction
+import { addToCart } from '../cart/cartApi.js';
+
 export function renderSpaceItems(spaceItem) {
     const li = document.createElement('li');
     li.classList.add('space-items');
@@ -28,11 +30,25 @@ export function renderSpaceItems(spaceItem) {
     pPrice.textContent = `$${spaceItem.price}`;
     li.append(pPrice);
 
-    const button = document.createElement('button');
-    button.classList.add('btn');
-    button.textContent = 'Add To Cart';
-    li.append(button);
+    // const button = document.createElement('button');
+    // button.classList.add('btn');
+    // button.textContent = 'Add To Cart';
+    // li.append(button);
+
+// Add to cart event listener
+    const addToCartBtn = document.createElement('button');
+    addToCartBtn.classList.add('add-button');
+    addToCartBtn.addEventListener('click', () => {
+        addToCart(spaceItem.id);
+    });
+
+    addToCartBtn.textContent = 'Want! Get in my cart!';
+    li.append(addToCartBtn);
 
     return li;
+
 }
+
+
+
 
