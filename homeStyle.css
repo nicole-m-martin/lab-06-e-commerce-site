@@ -4,7 +4,7 @@ body {
   box-sizing: border-box;
   color: #111;
   background-color: #d8e2dc;
-  background: url("../assets/stars.jpg") center/cover;
+  background: url("./assets/stars.jpg") center/cover;
   display: flex;
   align-items: center;
   justify-content: center;

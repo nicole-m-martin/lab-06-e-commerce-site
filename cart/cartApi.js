@@ -61,5 +61,4 @@ export function addToCart(id) {
     setCart(cart);
              
 }
-// reload the page
-// location.reload();
+
