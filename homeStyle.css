@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #111;
+  background-color: #d8e2dc;
+  background: url("../assets/stars.jpg") center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.main-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #caf0f8;
+  border: 7px solid #333;
+  border-radius: 10px;
+  width: 800px;
+  height: 300px;
+
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 25px;
+  font-family: "Trispace";
+}
+
+.store-name {
+  font-family: "Russo One", sans-serif;
+  font-size: 3rem;
+  color: #3f37c9;
+  text-shadow: 0.5rem 0.5rem 1rem #555;
+}
+
+.nav-bar {
+}

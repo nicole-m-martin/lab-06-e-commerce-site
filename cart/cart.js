@@ -38,12 +38,14 @@ const button = document.querySelector('button');
 
 button.addEventListener('click', () => {
     // alert customer of purchase
-    alert('Rad Stuff Is On The Way!!!');
+    alert(JSON.stringify('You are all set for space travel!'));
     clearCart();
     // after purchase go back to homepage
     location.reload();
     location.href = '../index.html';
-
+    if (cart === 0) {
+        button.disabled = true;
+    }
 });
 
 

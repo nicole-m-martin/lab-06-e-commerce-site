@@ -5,29 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="../styles/reset.css" />
-    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="./cartStyle.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Trispace&display=swap"
+      rel="stylesheet"
+    />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Anton&family=Trispace&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap"
       rel="stylesheet"
     />
 
     <title>Cart!</title>
   </head>
   <body>
-    <div class="products-link">
-      <a href="../products/">Back to products page!</a>
-    </div>
-
-    <h2>Here's your Rad Space Stuff</h2>
+    <h2>Here's Your Rad Space Stuff</h2>
 
     <section class="table-top">
       <table>
-        <tr>
-          <th>Space Product:</th>
-          <th>Quantity:</th>
-          <th>Price:</th>
-        </tr>
+        <thead>
+          <tr>
+            <th>Space Product:</th>
+            <th>Quantity:</th>
+            <th>Price:</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
       </table>
     </section>
 
@@ -35,6 +38,10 @@
       <button class="btn-2">Place Order!!</button>
     </div>
   </body>
+
+  <div class="products-link">
+    <a href="../products/">Back To Products Page!</a>
+  </div>
 
   <script type="module" src="./cart.js"></script>
 </html>

@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #d8e2dc;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  max-width: 1208px;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 300px;
+  width: 150px;
+  background-color: #caf0f8;
+  border: solid #333 1px;
+  margin: 15px;
+  border-radius: 5px;
+  font-family: "Russo One";
+  text-align: center;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  background: url("../assets/stars.jpg") center/cover;
+  color: whitesmoke;
+  font-family: "Russo One";
+  font-size: 25px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+p {
+  text-align: center;
+  margin: 5px;
+}
+
+img {
+  height: 100px;
+  width: 100px;
+}
+
+.btn {
+  background: #4c6ca0;
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 5px;
+  font-family: "Trispace";
+  background: url("../assets/stars.jpg") center/cover;
+}
+
+.cart-button {
+  text-align: center;
+  margin-top: 15px;
+}
+
+h2 {
+  margin-top: 15px;
+  text-align: center;
+  font-family: "Trispace";
+  font-size: 3rem;
+  color: #3f37c9;
+  text-shadow: 0.5rem 0.5rem 1rem #555;
+}

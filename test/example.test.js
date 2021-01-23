@@ -196,3 +196,16 @@ test('calcOrderTotal takes in the cart items and returns the total of the cart',
     // Make assertions about what is expected versus the actual result
     expect.equal(actual, expected);
 });
+
+// // clearCart Test
+// 'clearCart should stringify the default cart and set into local storage', (expect) => {
+    
+//     const emptyCart = [];
+
+//     const clearCart()
+
+
+
+
+
+// }
