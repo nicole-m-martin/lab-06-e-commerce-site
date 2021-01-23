@@ -2,7 +2,6 @@
 import { renderLineItems } from '../cart/renderLineItems.js';
 import { findById, getSpaceItemTotal, calOrderTotal } from '../cart/cartUtils.js';
 import { renderSpaceItems } from '../products/renderSpaceItems.js';
-// import { spaceItems } from '../products/data.js';
 
 
 
@@ -197,15 +196,3 @@ test('calcOrderTotal takes in the cart items and returns the total of the cart',
     expect.equal(actual, expected);
 });
 
-// // clearCart Test
-// 'clearCart should stringify the default cart and set into local storage', (expect) => {
-    
-//     const emptyCart = [];
-
-//     const clearCart()
-
-
-
-
-
-// }

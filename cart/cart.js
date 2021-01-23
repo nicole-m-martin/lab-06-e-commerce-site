@@ -1,5 +1,4 @@
 import { findById, calOrderTotal } from './cartUtils.js';
-// import { cart } from '../cart/cartData.js';
 import { spaceItems } from '../products/data.js';
 import { renderLineItems } from '../cart/renderLineItems.js';
 import { getCart, clearCart } from '../cart/cartApi.js';
@@ -26,9 +25,8 @@ const tTotal = document.createElement('td');
 
 tTotal.textContent = `Order Total: $${total}`;
 
-tRow.append(tData1);
-tRow.append(tData2);
-tRow.append(tTotal);
+tRow.append(tData1, tData2, tTotal);
+
 
 table.append(tRow);
 
@@ -43,9 +41,7 @@ button.addEventListener('click', () => {
     // after purchase go back to homepage
     location.reload();
     location.href = '../index.html';
-    if (cart === 0) {
-        button.disabled = true;
-    }
+
 });
 
 
